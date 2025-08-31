@@ -85,9 +85,9 @@ export default {
         this.routeInfo.limit,
         this.routeInfo.categoryId
       );
-      result.rows.forEach(
-        (item) => (item.thumb = "http://localhost:7001" + item.thumb)
-      );
+      // result.rows.forEach(
+      //   (item) => (item.thumb = "http://localhost:7001" + item.thumb)
+      // );
       return result;
     },
     handlepagechange(newpage) {

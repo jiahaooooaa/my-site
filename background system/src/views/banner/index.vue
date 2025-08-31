@@ -15,7 +15,7 @@
         <template slot-scope="scope">
           <el-image
             style="width: 100px"
-            :src="scope.row.midImg2"
+            :src="scope.row.midImg"
             fit="fill"
           ></el-image>
         </template>
@@ -24,7 +24,7 @@
         <template slot-scope="scope">
           <el-image
             style="width: 100px"
-            :src="scope.row.bigImg2"
+            :src="scope.row.bigImg"
             fit="fill"
           ></el-image>
         </template>
@@ -118,8 +118,8 @@ export default {
       getBanner().then((res) => {
         this.data = res.data;
         for (var item of this.data) {
-          item.midImg2 = server_URL + item.midImg;
-          item.bigImg2 = server_URL + item.bigImg;
+          // item.midImg2 = server_URL + item.midImg;
+          // item.bigImg2 = server_URL + item.bigImg;
         }
       });
     },

@@ -24,7 +24,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  publicPath: '/admin',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
@@ -36,15 +36,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy :{
-      '/res':{
-        target : 'http://127.0.0.1:7001'
+    proxy: {
+      '/res': {
+        target: 'http://127.0.0.1:7001'
       },
-      '/api':{
-        target : 'http://127.0.0.1:7001'
+      '/api': {
+        target: 'http://127.0.0.1:7001'
       },
-      'static':{
-        target : 'http://127.0.0.1:7001'
+      'static': {
+        target: 'http://127.0.0.1:7001'
       }
     }
     // before: require('./mock/mock-server.js')
@@ -98,7 +98,7 @@ module.exports = {
             .plugin('ScriptExtHtmlWebpackPlugin')
             .after('html')
             .use('script-ext-html-webpack-plugin', [{
-            // `runtime` must same as runtimeChunk name. default is `runtime`
+              // `runtime` must same as runtimeChunk name. default is `runtime`
               inline: /runtime\..*\.js$/
             }])
             .end()
